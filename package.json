@@ -1,0 +1,31 @@
+{
+  "name": "iwork-viewer-workspace",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "packageManager": "pnpm@11.0.9",
+  "engines": {
+    "node": ">=22.13"
+  },
+  "scripts": {
+    "build": "pnpm --filter iwork-viewer build && pnpm --filter @file-viewer/renderer-iwork build",
+    "type-check": "pnpm --filter iwork-viewer type-check && pnpm --filter @file-viewer/renderer-iwork type-check",
+    "test": "vitest run",
+    "verify": "pnpm build && pnpm test && pnpm pack:local && pnpm verify:standalone-tarball",
+    "pack:local": "node scripts/pack-local.mjs",
+    "verify:standalone-tarball": "node scripts/verify-standalone-tarball.mjs",
+    "fixtures:generate": "node scripts/generate-fixtures.mjs",
+    "verify:visual": "node scripts/verify-visual-fidelity.mjs",
+    "clean": "node scripts/clean.mjs"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.0",
+    "jszip": "^3.10.1",
+    "linkedom": "^0.18.12",
+    "pixelmatch": "^7.2.0",
+    "playwright": "^1.58.2",
+    "pngjs": "^7.0.0",
+    "typescript": "^6.0.3",
+    "vitest": "^4.0.18"
+  }
+}

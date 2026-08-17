@@ -1,0 +1,84 @@
+{
+  "name": "iwork-viewer",
+  "version": "1.0.0",
+  "private": false,
+  "type": "module",
+  "description": "Browser-native Apple iWork viewer for Pages, Numbers and Keynote with offline IWA and iWork 09 parsing.",
+  "keywords": [
+    "iwork viewer",
+    "apple iwork",
+    "pages viewer",
+    "numbers viewer",
+    "keynote viewer",
+    "pages",
+    "numbers",
+    "keynote",
+    "iwa",
+    "document viewer",
+    "offline",
+    "browser"
+  ],
+  "author": {
+    "name": "Yu Wang",
+    "email": "admin@flyfish.dev"
+  },
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/flyfish-dev/iwork-viewer.git",
+    "directory": "packages/iwork-viewer"
+  },
+  "homepage": "https://github.com/flyfish-dev/iwork-viewer#readme",
+  "bugs": {
+    "url": "https://github.com/flyfish-dev/iwork-viewer/issues"
+  },
+  "funding": {
+    "type": "individual",
+    "url": "https://dev.flyfish.group/donate?source=npm"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./parser": {
+      "types": "./dist/iwork.parser.d.ts",
+      "import": "./dist/iwork.parser.js",
+      "default": "./dist/iwork.parser.js"
+    },
+    "./worker/iwork.worker.js": "./dist/iwork.worker.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "README.en.md",
+    "LICENSE",
+    "THIRD_PARTY_NOTICES.md"
+  ],
+  "scripts": {
+    "build": "node scripts/clean.mjs && tsc -b tsconfig.json --force && node scripts/build-worker.mjs",
+    "type-check": "tsc -b tsconfig.json --force"
+  },
+  "dependencies": {
+    "@xmldom/xmldom": "0.9.10",
+    "jszip": "^3.10.1",
+    "keynote-archives": "2.0.1",
+    "pako": "^2.1.0",
+    "styled-exceljs": "0.21.1",
+    "tslib": "^2.8.1"
+  },
+  "devDependencies": {
+    "@types/pako": "^2.0.4",
+    "esbuild": "^0.28.1",
+    "typescript": "^6.0.3"
+  }
+}

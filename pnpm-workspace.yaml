@@ -1,0 +1,12 @@
+packages:
+  - packages/*
+
+allowBuilds:
+  esbuild: true
+
+patchedDependencies:
+  styled-exceljs@0.21.1: patches/styled-exceljs@0.21.1.patch
+
+autoInstallPeers: false
+
+strictPeerDependencies: false

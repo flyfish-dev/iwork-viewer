@@ -1,0 +1,56 @@
+{
+  "name": "@file-viewer/renderer-iwork",
+  "version": "2.3.0",
+  "private": false,
+  "type": "module",
+  "description": "File Viewer renderer adapter for the standalone iwork-viewer package.",
+  "keywords": ["file-viewer", "renderer", "iwork", "pages", "numbers", "keynote"],
+  "author": {
+    "name": "Yu Wang",
+    "email": "admin@flyfish.dev"
+  },
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/flyfish-dev/iwork-viewer.git",
+    "directory": "packages/renderer-iwork"
+  },
+  "homepage": "https://github.com/flyfish-dev/iwork-viewer#file-viewer-adapter",
+  "bugs": {
+    "url": "https://github.com/flyfish-dev/iwork-viewer/issues"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./parser": {
+      "types": "./dist/parser.d.ts",
+      "import": "./dist/parser.js",
+      "default": "./dist/parser.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": ["dist", "README.md", "README.en.md", "LICENSE"],
+  "scripts": {
+    "build": "node scripts/clean.mjs && tsc -b tsconfig.json --force",
+    "type-check": "tsc -b tsconfig.json --force"
+  },
+  "dependencies": {
+    "iwork-viewer": "workspace:1.0.0"
+  },
+  "peerDependencies": {
+    "@file-viewer/core": ">=2.3.0 <3"
+  },
+  "devDependencies": {
+    "typescript": "^6.0.3"
+  }
+}
