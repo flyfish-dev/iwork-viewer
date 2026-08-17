@@ -9,7 +9,21 @@ A browser-native, offline-first static viewer for Apple Pages, Numbers, and Keyn
 - Numbers displays saved formula results. Keynote animation, transitions, and video playback stay static.
 - Encrypted iwpv2 files are detected and reported; browser-side decryption is not claimed.
 
-This repository is currently a local extraction workspace. No public remote or npm release has been created.
+The project has two explicit package boundaries: the standalone viewer has no File Viewer dependency, while the adapter only implements File Viewer's renderer contract. Both packages stay browser-native and offline-capable, without server conversion or a runtime CDN.
+
+## Install
+
+Standalone:
+
+```bash
+pnpm add iwork-viewer@0.0.1
+```
+
+File Viewer integration:
+
+```bash
+pnpm add @file-viewer/core @file-viewer/renderer-iwork@0.0.1
+```
 
 ## Standalone
 
@@ -31,3 +45,20 @@ const viewer = createFileViewer({
   options: { renderers: [iworkRenderer] },
 })
 ```
+
+## Scope
+
+- Pages: paginated and page-layout scenes, text, images, shapes, tables, charts, and styles.
+- Numbers: multiple freeform sheets and tables, saved formula results, number formats, images, shapes, and charts.
+- Keynote: slides, master backgrounds, text, images, shapes, tables, charts, and presenter notes.
+- Keynote animations, transitions, and video playback are not executed. Numbers formulas are not recalculated.
+- Encrypted iwpv2 is detected only. Unknown IWA object graphs are limited previews and are not fidelity evidence.
+
+## Development
+
+```bash
+pnpm install --frozen-lockfile
+pnpm verify
+```
+
+Real Apple fixture provenance and SHA-256 values live in `test/fixtures/manifest.json`; visual baselines live in `test/goldens/`. Report security issues privately as described in [SECURITY.md](./SECURITY.md).

@@ -1,6 +1,6 @@
 {
   "name": "iwork-viewer",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "private": false,
   "type": "module",
   "description": "Browser-native Apple iWork viewer for Pages, Numbers and Keynote with offline IWA and iWork 09 parsing.",
@@ -66,7 +66,8 @@
   ],
   "scripts": {
     "build": "node scripts/clean.mjs && tsc -b tsconfig.json --force && node scripts/build-worker.mjs",
-    "type-check": "tsc -b tsconfig.json --force"
+    "type-check": "tsc -b tsconfig.json --force",
+    "prepack": "pnpm run build"
   },
   "dependencies": {
     "@xmldom/xmldom": "0.9.10",

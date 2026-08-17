@@ -70,7 +70,7 @@ importers:
   packages/renderer-iwork:
     dependencies:
       iwork-viewer:
-        specifier: workspace:1.0.0
+        specifier: workspace:0.0.1
         version: link:../iwork-viewer
     devDependencies:
       typescript:

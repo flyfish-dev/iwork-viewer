@@ -1,6 +1,6 @@
 {
   "name": "@file-viewer/renderer-iwork",
-  "version": "2.3.0",
+  "version": "0.0.1",
   "private": false,
   "type": "module",
   "description": "File Viewer renderer adapter for the standalone iwork-viewer package.",
@@ -42,10 +42,11 @@
   "files": ["dist", "README.md", "README.en.md", "LICENSE"],
   "scripts": {
     "build": "node scripts/clean.mjs && tsc -b tsconfig.json --force",
-    "type-check": "tsc -b tsconfig.json --force"
+    "type-check": "tsc -b tsconfig.json --force",
+    "prepack": "pnpm run build"
   },
   "dependencies": {
-    "iwork-viewer": "workspace:1.0.0"
+    "iwork-viewer": "workspace:0.0.1"
   },
   "peerDependencies": {
     "@file-viewer/core": ">=2.3.0 <3"

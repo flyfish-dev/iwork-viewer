@@ -9,7 +9,21 @@
 - Numbers 显示文档保存的公式结果；Keynote 不执行动画、转场或视频播放。
 - 加密 iwpv2 文件只做检测和明确报错，不在浏览器中解密。
 
-当前仓库仅用于本地拆分验证，尚未创建公开远端或发布 npm 包。
+项目采用双包边界：独立预览器不依赖 File Viewer，适配包只负责接入 File Viewer 的 renderer 契约。两个包都保持浏览器原生、离线可用，不依赖服务端转换或运行时 CDN。
+
+## 安装
+
+独立使用：
+
+```bash
+pnpm add iwork-viewer@0.0.1
+```
+
+接入 File Viewer：
+
+```bash
+pnpm add @file-viewer/core @file-viewer/renderer-iwork@0.0.1
+```
 
 ## 独立使用
 
@@ -33,5 +47,22 @@ const viewer = createFileViewer({
   options: { renderers: [iworkRenderer] },
 })
 ```
+
+## 支持边界
+
+- Pages：分页与页面布局、文本、图片、形状、表格、图表和样式。
+- Numbers：多工作表自由画布、多个表格、保存的公式结果、数字格式、图片、形状和图表。
+- Keynote：幻灯片、母版背景、文本、图片、形状、表格、图表和演讲者备注。
+- 不执行 Keynote 动画、转场和视频播放；不重新计算 Numbers 公式。
+- 加密 iwpv2 只做可靠检测；未知 IWA 对象图仅作为有限预览，不计入高保真证据。
+
+## 开发验证
+
+```bash
+pnpm install --frozen-lockfile
+pnpm verify
+```
+
+真实 Apple fixtures、来源与 SHA-256 位于 `test/fixtures/manifest.json`；视觉基线位于 `test/goldens/`。安全问题请按 [SECURITY.md](./SECURITY.md) 私下报告。
 
 英文说明见 [README.en.md](./README.en.md)。

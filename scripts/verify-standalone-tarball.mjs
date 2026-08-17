@@ -6,7 +6,8 @@ import { extname, join, resolve } from 'node:path'
 import { spawnSync } from 'node:child_process'
 import { chromium } from 'playwright'
 
-const tarball = resolve('.release/packages/iwork-viewer-1.0.0.tgz')
+const standalonePackage = JSON.parse(await readFile(resolve('packages/iwork-viewer/package.json'), 'utf8'))
+const tarball = resolve(`.release/packages/iwork-viewer-${standalonePackage.version}.tgz`)
 if (!existsSync(tarball)) throw new Error('Missing standalone tarball. Run pnpm pack:local first.')
 const temporaryRoot = await mkdtemp(join(tmpdir(), 'iwork-viewer-standalone-'))
 const fixtures = [
