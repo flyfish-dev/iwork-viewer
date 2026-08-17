@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="./assets/iwork-viewer-logo.svg" width="104" height="104" alt="iWork Viewer Logo" />
+  <img src="https://github.com/flyfish-dev/iwork-viewer/releases/download/v0.0.2/iwork-viewer-logo.png" width="104" height="104" alt="iWork Viewer logo" />
   <h1>iWork Viewer</h1>
   <p>浏览器原生、离线优先的 Apple Pages、Numbers 和 Keynote 静态预览器。</p>
   <p><a href="./README.md">English</a> · 简体中文</p>

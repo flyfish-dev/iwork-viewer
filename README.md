@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="./assets/iwork-viewer-logo.svg" width="112" height="112" alt="iWork Viewer logo" />
+  <img src="https://github.com/flyfish-dev/iwork-viewer/releases/download/v0.0.2/iwork-viewer-logo.png" width="112" height="112" alt="iWork Viewer logo" />
 
   <h1>iWork Viewer</h1>
 
