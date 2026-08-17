@@ -1,6 +1,6 @@
 {
   "name": "@file-viewer/renderer-iwork",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": false,
   "type": "module",
   "description": "File Viewer renderer adapter for the standalone iwork-viewer package.",
@@ -46,7 +46,7 @@
     "prepack": "pnpm run build"
   },
   "dependencies": {
-    "iwork-viewer": "workspace:0.0.1"
+    "iwork-viewer": "workspace:0.0.2"
   },
   "peerDependencies": {
     "@file-viewer/core": ">=2.3.0 <3"

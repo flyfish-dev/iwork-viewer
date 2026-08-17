@@ -1,6 +1,6 @@
 {
   "name": "iwork-viewer",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": false,
   "type": "module",
   "description": "Browser-native Apple iWork viewer for Pages, Numbers and Keynote with offline IWA and iWork 09 parsing.",
@@ -70,7 +70,7 @@
     "prepack": "pnpm run build"
   },
   "dependencies": {
-    "@xmldom/xmldom": "0.9.10",
+    "@xmldom/xmldom": "0.9.11",
     "jszip": "^3.10.1",
     "keynote-archives": "2.0.1",
     "pako": "^2.1.0",

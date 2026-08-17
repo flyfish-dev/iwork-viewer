@@ -3,7 +3,7 @@
 浏览器原生、离线优先的 Apple Pages、Numbers 和 Keynote 静态预览器，不依赖 File Viewer、服务端转换或运行时 CDN。
 
 ```bash
-pnpm add iwork-viewer@0.0.1
+pnpm add iwork-viewer@0.0.2
 ```
 
 ```ts

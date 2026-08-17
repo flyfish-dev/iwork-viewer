@@ -3,7 +3,7 @@
 A browser-native, offline-first static viewer for Apple Pages, Numbers, and Keynote. It has no File Viewer, server-conversion, or runtime-CDN dependency.
 
 ```bash
-pnpm add iwork-viewer@0.0.1
+pnpm add iwork-viewer@0.0.2
 ```
 
 ```ts

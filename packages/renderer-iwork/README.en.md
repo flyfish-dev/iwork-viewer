@@ -3,7 +3,7 @@
 The thin File Viewer adapter for `iwork-viewer`. Parsing and scene rendering live in the standalone package; this package only connects format registration, Worker paths, zoom, export, and thumbnail contracts.
 
 ```bash
-pnpm add @file-viewer/core @file-viewer/renderer-iwork@0.0.1
+pnpm add @file-viewer/core@^2.3.0 @file-viewer/renderer-iwork@0.0.2
 ```
 
 ```ts

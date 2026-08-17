@@ -39,8 +39,8 @@ importers:
   packages/iwork-viewer:
     dependencies:
       '@xmldom/xmldom':
-        specifier: 0.9.10
-        version: 0.9.10
+        specifier: 0.9.11
+        version: 0.9.11
       jszip:
         specifier: ^3.10.1
         version: 3.10.1
@@ -70,7 +70,7 @@ importers:
   packages/renderer-iwork:
     dependencies:
       iwork-viewer:
-        specifier: workspace:0.0.1
+        specifier: workspace:0.0.2
         version: link:../iwork-viewer
     devDependencies:
       typescript:
@@ -384,8 +384,8 @@ packages:
   '@vitest/utils@4.1.10':
     resolution: {integrity: sha512-fy9am/HWxbaGt/Sawrp90vt6Y6jQwf1RX77cz3uwoJwJVMli/e1IEwRPnMNJ7vKfPTwo0diXifkpPvwH9v7nGA==}
 
-  '@xmldom/xmldom@0.9.10':
-    resolution: {integrity: sha512-A9gOqLdi6cV4ibazAjcQufGj0B1y/vDqYrcuP6d/6x8P27gRS8643Dj9o1dEKtB6O7fwxb2FgBmJS2mX7gpvdw==}
+  '@xmldom/xmldom@0.9.11':
+    resolution: {integrity: sha512-tW8bcK3hsG0/uqSnNz6TK4BkcuZSezoU7DlnYssILmZDktPnSHHuDJJFM0AJv+13gz2r0iGdrj6qqKeUnxXEDg==}
     engines: {node: '>=14.6'}
 
   assertion-error@2.0.1:
@@ -1006,7 +1006,7 @@ snapshots:
       convert-source-map: 2.0.0
       tinyrainbow: 3.1.1
 
-  '@xmldom/xmldom@0.9.10': {}
+  '@xmldom/xmldom@0.9.11': {}
 
   assertion-error@2.0.1: {}
 

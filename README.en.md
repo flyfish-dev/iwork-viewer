@@ -16,13 +16,13 @@ The project has two explicit package boundaries: the standalone viewer has no Fi
 Standalone:
 
 ```bash
-pnpm add iwork-viewer@0.0.1
+pnpm add iwork-viewer@0.0.2
 ```
 
 File Viewer integration:
 
 ```bash
-pnpm add @file-viewer/core @file-viewer/renderer-iwork@0.0.1
+pnpm add @file-viewer/core@^2.3.0 @file-viewer/renderer-iwork@0.0.2
 ```
 
 ## Standalone

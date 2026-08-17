@@ -3,7 +3,7 @@
 `iwork-viewer` 的 File Viewer 薄适配包。解析与场景渲染由独立包提供；本包只连接格式注册、Worker 路径、缩放、导出和缩略图契约。
 
 ```bash
-pnpm add @file-viewer/core @file-viewer/renderer-iwork@0.0.1
+pnpm add @file-viewer/core@^2.3.0 @file-viewer/renderer-iwork@0.0.2
 ```
 
 ```ts
